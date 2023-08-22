@@ -1,5 +1,7 @@
 # Description
-Catch is a payment processor that exclusively provides the ability to pay via a bank account EFT.  Catch also allows customers to accumulate store credit, which can be applied on future orders that are paid via Catch.
+Catch helps merchants [drive customer retention and loyalty](https://www.getcatch.com/for-merchants) while giving consumers a new and rewarding way to pay. Merchants partner with Catch to foster higher repeat rates, purchase frequency, and engagement across your customer base, including from new-to-file customers.
+
+Use Catch's official Salesforce Commerce Cloud cartridge to add Catch to your storefront.
 
 # Version
 ## [22.3.0] - Unreleased
@@ -21,24 +23,23 @@ Catch is a payment processor that exclusively provides the ability to pay via a 
 6. Follow the SFRA or Site Genesis document (depending on the architecture of your project) to integrate and upload the cartridges, import environment data, and configure site preferences
 
 ## Testing & Linting
-Use  `npm run test`  to run unit tests
-Use  `npm run test:integration`  to run integration tests (make sure you have a `dw.json` file in the root folder and correct Site ID in `it.config.js` file)
-Use  `npm run lint`  to run linter
+Use  `npm run test`  to run unit tests.
+Use  `npm run test:integration`  to run integration tests (make sure you have a `dw.json` file in the root folder and correct Site ID in `it.config.js` file).
+Use  `npm run lint`  to run linter.
 
 # Documentation
-You can find documentation in the documentation folder of the repository:
-[Integration Guide SFRA](documentation/Catch%20Integration%20Guide%20for%20SFRA%20v22_2.docx)
-[Integration Guide SG](documentation/Catch%20Integration%20Guide%20SG-controllers%20v22_2.docx)
+For background on Catch and the high-level set-up of our SFCC integration, review our [integration overview](https://catch.readme.io/reference/salesforce-commerce-cloud-integration).
+
+For information on installing and configuring this cartridge, check out the files in the documentation folder of this repository:
 [Cartridge Overview](documentation/Catch%20-%20Cartridge%20overview.docx)
+[Integration Guide for SFRA](documentation/Catch%20Integration%20Guide%20for%20SFRA%20v22_2.docx)
+[Integration Guide for SiteGenesis](documentation/Catch%20Integration%20Guide%20SG-controllers%20v22_2.docx)
+
 or on Google Drive:
+[Cartridge overview](https://docs.google.com/document/d/1FIvrvRaYkmHLB2aySPvzDv12xC5Eo6oFhg-6aUTGH14/edit#)
 [Integration Guide SFRA](https://docs.google.com/document/d/1CST_zWlO2bYd5IrAsN8rbUZx0-9RaGX_BNRNbxuGphw/edit#)
 [Integration Guide SG](https://docs.google.com/document/d/1iIgvSbU2z7w08G8GbBbe0bO1UNi60p78kl6q0AkLRI0/edit#)
-[Cartridge overview](https://docs.google.com/document/d/1FIvrvRaYkmHLB2aySPvzDv12xC5Eo6oFhg-6aUTGH14/edit#)
 
-# Contributing
 
-Maintained by the cartridge team, but you can submit a PR for review by the team.
-
-## Contacts
-
-[ICDLP team](https://confluence.ontrq.com/display/3PD/Team+Info)
+# Contact & contributions
+Catch maintains this official cartridge. If you have feedback or requests, please contact merchant-support@getcatch.com.

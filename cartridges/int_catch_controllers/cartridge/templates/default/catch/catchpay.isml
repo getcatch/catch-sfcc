@@ -1,0 +1,31 @@
+<isloop items="${pdict.Basket.getPaymentInstruments('Catch').toArray()}" var="PaymentInstrument">
+    <isif condition="${PaymentInstrument}">
+        <isset name="isRegisteredUser" value="${pdict.Basket.customer.registered}" scope="page" />
+
+        <isif condition="${isRegisteredUser === true}">
+            <button class="button-fancy-large"
+                id="catch-payment-button"
+                type="button" name="button"
+                data-id="<isprint value="${pdict.Basket.custom.catch_checkoutId}" encoding="htmldoublequote" />"
+                data-name="<isprint value="${pdict.Basket.customer.profile.firstName + ' ' + pdict.Basket.customer.profile.lastName}" encoding="htmldoublequote" />"
+                data-email="<isprint value="${pdict.Basket.customer.profile.email}" encoding="htmldoublequote" />"
+                data-phone="<isprint value="${pdict.Basket.customer.profile.phoneMobile || pdict.Basket.customer.profile.phoneBusiness || pdict.Basket.customer.profile.phoneHome}" encoding="htmldoublequote" />"
+                data-catch-create-order-url="${URLUtils.url('Catch-CreateOrder')}"
+                disabled>
+			    ${Resource.msg('catch.paybutton', 'catch', null)}
+		    </button>
+        <iselse/>
+            <button class="button-fancy-large"
+                id="catch-payment-button"
+                type="button" name="button"
+                data-id="<isprint value="${pdict.Basket.custom.catch_checkoutId}" encoding="htmldoublequote" />"
+                data-name="<isprint value="${pdict.Basket.billingAddress.fullName}" encoding="htmldoublequote" />"
+                data-email="<isprint value="${pdict.Basket.customerEmail}" encoding="htmldoublequote" />"
+                data-phone="<isprint value="${pdict.Basket.billingAddress.phone}" encoding="htmldoublequote" />"
+                data-catch-create-order-url="${URLUtils.url('Catch-CreateOrder')}"
+                disabled>
+			    ${Resource.msg('catch.paybutton', 'catch', null)}
+		    </button>
+        </isif>
+    </isif>
+</isloop>

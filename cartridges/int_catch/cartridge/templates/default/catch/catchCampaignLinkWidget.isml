@@ -1,0 +1,8 @@
+<catch-campaign-link
+    campaign-name="<isprint value="${pdict.campaignName}" encoding="htmldoublequote" />"
+    anchor-target="_blank"
+    <isif condition="${pdict.catchTheme}">
+        theme="<isprint value="${pdict.catchTheme}" encoding="htmldoublequote" />"
+    </isif>
+>
+</catch-campaign-link>

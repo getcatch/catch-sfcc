@@ -1,0 +1,14 @@
+<isif condition="${pdict.isCatchEnabled}">
+	<catch-callout class="catch-pdp-widget
+	    <isif condition="${pdict.isIneligible}">callout-disabled</isif>
+		<isif condition="${pdict.isOverPriceLimit}">catch-hidden</isif>"
+		price="<isif condition="${pdict.isPrerenderedPrice}"><isprint value="${pdict.priceTotalInCents}" encoding="htmldoublequote" /></isif>"
+		theme="<isprint value="${pdict.catchTheme || 'light-color'}" encoding="htmldoublequote" />"
+		border-style="<isprint value="${pdict.catchBorderStyle || 'none'}" encoding="htmldoublequote" />"
+		items="<isprint value="${pdict.items}" encoding="htmldoublequote" />"
+		<isif condition="${pdict.catchOrPrefix}">
+			or-prefix="<isprint value="${pdict.catchOrPrefix}" encoding="htmldoublequote" />"
+		</isif>	
+		userCohorts="<isprint value="${pdict.catchUserCohorts}" encoding="htmldoublequote" />"
+	/>
+</isif>

@@ -1,0 +1,10 @@
+<isset name="catchHelper" value="${require('*/cartridge/scripts/catch/helper/catchHelper')}" scope="page" />
+
+<isloop items="${pdict.order.billing.payment.applicablePaymentMethods}" var="paymentOption">
+    <isif condition="${paymentOption.ID === 'CREDIT_CARD'}">
+        <isinclude template="checkout/billing/paymentOptions/creditCardContent" />
+    </isif>
+    <isif condition="${paymentOption.ID === 'Catch' && catchHelper.getPreference('enable')}">
+        <isinclude template="checkout/billing/paymentOptions/catchContent" />
+    </isif>
+</isloop>

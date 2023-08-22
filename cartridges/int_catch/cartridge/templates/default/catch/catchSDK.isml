@@ -1,0 +1,8 @@
+
+<isset name="catchHelper" value="${require('*/cartridge/scripts/catch/helper/catchHelper')}" scope="page" />
+
+<isif condition="${catchHelper.getPreference('enable')}">
+	<isset name="catchSDKUrl" value="${catchHelper.getCatchSDKUrl()}" scope="page" />
+
+	<script src="<isprint value="${catchSDKUrl}" encoding="htmldoublequote" />"></script>
+</isif>

@@ -1,0 +1,21 @@
+<isif condition="${pdict.isCatchEnabled}">
+    <isif condition="${pdict.isCatchVirtualCard}">
+        <isif condition="${pdict.enableWidget}">
+            <catch-purchase-confirmation-by-order-id
+                order-id="${pdict.orderNo}"
+                theme="<isprint value="${pdict.catchTheme}" encoding="htmldoublequote" />"
+                anchor-target="_blank"
+            />
+        </isif>
+    <iselse/>
+        <catch-purchase-confirmation
+            id="catch-purchase-widget"
+            class="catch-data"
+            earned="<isprint value="${(pdict.catchEarnedRewards).toFixed()}" encoding="htmldoublequote"/>"
+            theme="<isprint value="${pdict.catchTheme}" encoding="htmldoublequote" />"
+            data-key="<isprint value="${pdict.catchPublicKey}" encoding="htmldoublequote" />"
+            anchor-target="_blank"
+        />
+    </isif>
+</isif>
+

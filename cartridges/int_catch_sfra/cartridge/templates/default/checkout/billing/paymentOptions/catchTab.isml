@@ -1,0 +1,16 @@
+
+<li 
+    class="nav-item catch-tab-hidden" 
+    id="catch-payment-tab"
+    data-method-id="<isprint value="${paymentOption.ID}" encoding="htmldoublequote" />"
+    >
+    <a class="nav-link catch-content"
+        data-toggle="tab" href="#catch-content" role="tab">
+        <img class="credit-card-option"
+                src="${URLUtils.staticURL('/images/Catch_logo.svg')}"
+                height="32"
+                alt="<isprint value="${paymentOption.name}" encoding="htmldoublequote" />"
+                title="<isprint value="${paymentOption.name}" encoding="htmldoublequote" />"
+        />
+    </a>
+</li>

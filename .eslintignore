@@ -1,0 +1,14 @@
+cartridges/app_storefront_core/
+cartridges/app_storefront_controllers/
+cartridges/app_storefront_base/
+cartridges/bm_app_storefront_base/
+cartridges/modules/
+cartridges/sg_changes/
+workspace/
+coverage/
+doc/
+bin/
+codecept.conf.js
+cartridges/*/cartridge/static/
+test/
+webpack.config.js

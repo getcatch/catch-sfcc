@@ -1,0 +1,4 @@
+<isif condition="${require('*/cartridge/scripts/catch/helper/catchHelper').getPreference('enable')}">
+	<isinclude template="catch/catchSDK" />
+	<script src="${URLUtils.staticURL('/js/catch/catchInit.js')}"></script>
+</isif>

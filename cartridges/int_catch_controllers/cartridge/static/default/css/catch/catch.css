@@ -1,0 +1,43 @@
+.catch-pdp-widget {
+    margin-bottom: 0.625rem;
+}
+
+.callout-disabled {
+    display: none;
+}
+
+.catch-hidden {
+    display: none;
+}
+
+.callout-mini-cart-wrapper {
+    margin: 0 0.625rem;
+    margin-top: 0.625rem;
+}
+
+/* stylelint-disable selector-type-no-unknown */
+.callout-widget-wrapper > catch-callout {
+    float: right;
+    width: auto;
+}
+
+#catch-payment-tab {
+    display: none;
+}
+
+.label-hidden {
+    display: none;
+}
+
+.catch-checkout-error {
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+
+.catch-flex {
+    display: flex;
+    align-items: center;
+}
+

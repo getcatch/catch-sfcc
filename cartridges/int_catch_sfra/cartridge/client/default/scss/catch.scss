@@ -1,0 +1,32 @@
+.catch-pdp-widget {
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+}
+
+.callout-disabled,
+.catch-tab-hidden,
+.catch-hidden {
+    display: none;
+}
+
+#catch-purchase-widget,
+.callout-mini-cart-wrapper {
+    margin-bottom: 0.625rem;
+}
+
+#catch-payment-widget {
+    margin: 0 auto;
+}
+
+.catch-payment-widget-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+// stylelint-disable selector-type-no-unknown
+.callout-mini-cart-wrapper > catch-callout,
+.callout-checkout-wrapper > catch-callout,
+.catch-payment-widget-container > catch-payment-method {
+    width: auto;
+}

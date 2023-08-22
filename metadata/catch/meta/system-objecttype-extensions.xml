@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="Basket">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="catch_checkoutId">
+                <display-name xml:lang="x-default">Checkout ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_purchaseId">
+                <display-name xml:lang="x-default">Purchase ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_basketState">
+                <display-name xml:lang="x-default">Basket State</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+    </type-extension>
+
+    <type-extension type-id="CustomerGroup">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="catch_includeToCohorts">
+                <display-name xml:lang="x-default">Include To Cohorts</display-name>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Catch">
+                <display-name xml:lang="x-default">Catch</display-name>
+                <attribute attribute-id="catch_includeToCohorts"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Order">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="catch_checkoutId">
+                <display-name xml:lang="x-default">Checkout ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_purchaseId">
+                <display-name xml:lang="x-default">Purchase ID</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_earned">
+                <display-name xml:lang="x-default">Earned Rewards</display-name>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_applied_rewards">
+                <display-name xml:lang="x-default">Applied Rewards</display-name>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_integrationType">
+                <display-name xml:lang="x-default">IntegrationType</display-name>
+                <description xml:lang="x-default">Catch payment method type used to pay for the order, Direct or Virtual Card checkout</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>true</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Catch">
+                <display-name xml:lang="x-default">Catch</display-name>
+                <attribute attribute-id="catch_checkoutId"/>
+                <attribute attribute-id="catch_purchaseId"/>
+                <attribute attribute-id="catch_earned"/>
+                <attribute attribute-id="catch_applied_rewards"/>
+                <attribute attribute-id="catch_integrationType"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="Product">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="catch_ineligible">
+                <display-name xml:lang="x-default">Is Ineligible</display-name>
+                <type>boolean</type>
+                <site-specific-flag>false</site-specific-flag>
+                <mandatory-flag>false</mandatory-flag>
+                <visible-flag>false</visible-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <order-required-flag>false</order-required-flag>
+                <externally-defined-flag>false</externally-defined-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Catch">
+                <display-name xml:lang="x-default">Catch</display-name>
+                <attribute attribute-id="catch_ineligible"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="catch_apiKey">
+                <display-name xml:lang="x-default">Catch API Key</display-name>
+                <description xml:lang="x-default">API key</description>
+                <type>password</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_borderStyle">
+                <display-name xml:lang="x-default">Catch  Border Style</display-name>
+                <description xml:lang="x-default">The style of border the widget renders.</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Default</display>
+                        <value>default</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Pill</display>
+                        <value>pill</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Square</display>
+                        <value>square</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_theme">
+                <display-name xml:lang="x-default">Catch Theme</display-name>
+                <description xml:lang="x-default">Specifies the default theme which determines the look and feel of widgets</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition>
+                        <display xml:lang="x-default">Light color</display>
+                        <value>light-color</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Light mono</display>
+                        <value>light-mono</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Dark- color</display>
+                        <value>dark-color</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Dark mono</display>
+                        <value>dark-mono</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_enable">
+                <display-name xml:lang="x-default">Catch Enabled</display-name>
+                <description xml:lang="x-default">Enables Catch Cartridge</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_publicKey">
+                <display-name xml:lang="x-default">Catch Public Key</display-name>
+                <description xml:lang="x-default">Public Key</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_orPrefix">
+                <display-name xml:lang="x-default">Catch Or-Prefix</display-name>
+                <description xml:lang="x-default">The word "Or" is prepended into the displayed messaging in callout widget</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_campaignLinkWidgetEnable">
+                <display-name xml:lang="x-default">Catch Campaign Link Widget Enabled</display-name>
+                <description xml:lang="x-default">Enables Catch Campaign Link Widget</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_campaignName">
+                <display-name xml:lang="x-default">Catch Campaign Name</display-name>
+                <description xml:lang="x-default">The name of a valid and active Catch campaign for campaign link widget</description>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_retriesApproach">
+                <display-name xml:lang="x-default">Retries Approach</display-name>
+                <description xml:lang="x-default">Approach to automatic retries in case of 5xx failures from Catch endpoints. Either two subsequent retries with no delay, or retries with an exponential delay</description>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Retries without delay</display>
+                        <value>noDelay</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Retries with delay</display>
+                        <value>delay</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_retriesInitialDelayTime">
+                <display-name xml:lang="x-default">Retries Initial Delay Time (ms)</display-name>
+                <description xml:lang="x-default">Initial delay time for retries in milliseconds (required when Retries with delay approach is chosen)</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_retriesDuration">
+                <display-name xml:lang="x-default">Retries Duration (ms)</display-name>
+                <description xml:lang="x-default">Time in milliseconds during which retries will be performed (required when Retries with delay approach is chosen)</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_IntegrationType">
+                <display-name xml:lang="x-default">Integration Type</display-name>
+                <type>enum-of-string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <value-definitions>
+                    <value-definition default="true">
+                        <display xml:lang="x-default">Direct Checkout</display>
+                        <value>direct</value>
+                    </value-definition>
+                    <value-definition>
+                        <display xml:lang="x-default">Virtual Card Checkout</display>
+                        <value>virtual_card</value>
+                    </value-definition>
+                </value-definitions>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_hideHeader">
+                <display-name xml:lang="x-default">This flag toggles the visibility of the header in the cart at checkout</display-name>
+                <description xml:lang="x-default">This flag toggles the visibility of the header in the cart at checkout</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_autoCloseOnConfirm">
+                <display-name xml:lang="x-default">Close the Catch checkout modal window after confirming the payment</display-name>
+                <description xml:lang="x-default">Close the Catch checkout modal window after confirming the payment</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_enableCatchConfirmationWidget">
+                <display-name xml:lang="x-default">Catch Virtual Card Purchase Confirmation Widget Enabled</display-name>
+                <description xml:lang="x-default">Catch Virtual Card Purchase Confirmation Widget Enabled</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>true</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_VirtualIntegrationOrderTotalLimit">
+                <display-name xml:lang="x-default">Integration Type Experiment Threshold</display-name>
+                <description xml:lang="x-default">Optional checkout total (in integer cents) below which the cartridge should use your non-default integration type.</description>
+                <type>int</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>0</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_SandboxBaseURL">
+                <display-name xml:lang="x-default">Catch Sandbox Base URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://api-sandbox.getcatch.com/v1/</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_SandboxSDKURL">
+                <display-name xml:lang="x-default">Catch Sandbox SDK URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://js-sandbox.getcatch.com/catchjs/v1/catch.js</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_ProductionBaseURL">
+                <display-name xml:lang="x-default">Catch Production Base URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://api.getcatch.com/v1/</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_ProductionSDKURL">
+                <display-name xml:lang="x-default">Catch Production SDK URL</display-name>
+                <type>string</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <min-length>0</min-length>
+                <default-value>https://js.getcatch.com/catchjs/v1/catch.js</default-value>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="Catch">
+                <display-name xml:lang="x-default">Catch</display-name>
+                <attribute attribute-id="catch_enable"/>
+                <attribute attribute-id="catch_publicKey"/>
+                <attribute attribute-id="catch_apiKey"/>
+                <attribute attribute-id="catch_SandboxBaseURL"/>
+                <attribute attribute-id="catch_SandboxSDKURL"/>
+                <attribute attribute-id="catch_ProductionBaseURL"/>
+                <attribute attribute-id="catch_ProductionSDKURL"/>
+                <attribute attribute-id="catch_borderStyle"/>
+                <attribute attribute-id="catch_theme"/>
+                <attribute attribute-id="catch_orPrefix"/>
+                <attribute attribute-id="catch_campaignLinkWidgetEnable"/>
+                <attribute attribute-id="catch_campaignName"/>
+                <attribute attribute-id="catch_retriesApproach"/>
+                <attribute attribute-id="catch_retriesInitialDelayTime"/>
+                <attribute attribute-id="catch_retriesDuration"/>
+                <attribute attribute-id="catch_IntegrationType"/>
+                <attribute attribute-id="catch_hideHeader"/>
+                <attribute attribute-id="catch_autoCloseOnConfirm"/>
+                <attribute attribute-id="catch_enableCatchConfirmationWidget"/>
+                <attribute attribute-id="catch_VirtualIntegrationOrderTotalLimit"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

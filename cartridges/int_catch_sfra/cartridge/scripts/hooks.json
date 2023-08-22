@@ -1,0 +1,12 @@
+{
+	"hooks": [
+       	{
+			"name": "app.payment.processor.catch",
+			"script": "./payment/processor/catch"
+		},
+		{
+			"name": "app.payment.form.processor.catch",
+			"script": "./payment/processor/catch_form_processor"
+		}
+	]
+}

@@ -1,0 +1,11 @@
+<isif condition="${pdict.isCatchEnabled}">
+	<catch-payment-method
+		id="catch-payment-widget"
+		price="<isprint value="${pdict.priceTotalInCents}" encoding="htmldoublequote" />"
+		theme="<isprint value="${pdict.catchTheme}" encoding="htmldoublequote" />"
+
+		<isif condition="${pdict.isIneligibleProductInBasket}">
+			disabled
+		</isif>
+	/>
+</isif>

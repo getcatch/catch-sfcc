@@ -1,0 +1,12 @@
+    <div class="payment-details">
+    <isloop items="${pdict.order.billing.payment.selectedPaymentInstruments}" var="payment">
+        <isif condition="${payment.paymentMethod === 'CREDIT_CARD'}">
+            <isinclude template="checkout/billing/paymentOptions/creditCardSummary" />
+        </isif>
+        <isif condition="${payment.paymentMethod === 'Catch'}">
+            <div class="credit-card-type" data-payment="catch">
+                <span>${Resource.msg('msg.payment.catch', 'catch', null)}</span>
+            </div>
+        </isif>
+    </isloop>
+</div>

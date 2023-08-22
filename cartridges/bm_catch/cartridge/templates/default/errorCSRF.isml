@@ -1,0 +1,21 @@
+<!--- TEMPLATENAME: errorCSRF.isml --->
+
+<isdecorate template="application/MenuFrame">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0">
+        <tbody>
+            <tr>
+                <td class="table_title w e s" colspan="2">
+                    <isprint value="${Resource.msg('lable.error.information', 'catch', null)}" encoding="htmlcontent" />
+                </td>
+            </tr>
+            <tr>
+                <td class="table_detail w e s n top" nowrap="">
+                    <isprint value="${Resource.msg('lable.error.information', 'catch', null)}" encoding="htmlcontent" />
+                </td>
+                <td class="table_detail error e s n top error_details" width="100%">
+                    <isprint value="${Resource.msg('lable.error.csrf', 'catch', null)}" encoding="htmlcontent" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</isdecorate>

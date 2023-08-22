@@ -1,0 +1,72 @@
+<!--- TEMPLATENAME: index.isml --->
+
+<isdecorate template="application/MenuFrame">
+    <iscontent type="text/html" charset="UTF-8" />
+    <isinclude template="inc/Modules"/>
+    <isset name="prefs"  value="${URLUtils.url('SiteNavigationBar-ShowMenuitemOverview', 'CurrentMenuItemId', 'site-prefs')}" scope="PAGE" />
+    <ISBreadcrumb name1="Site Preferences" url1="${prefs}" name2="Catch Config" />
+    <script src="${URLUtils.staticURL('/js/handler.js')}"></script>
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+        <tbody>
+            <tr>
+                <td class="table_title aldi" width="83%" nowrap="nowrap">
+                    ${Resource.msg('lable.title', 'catch', null)}
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="table_title_description n"></td>  
+            </tr>
+        </tbody>
+    </table>
+            
+    <form action="${pdict.configurationContinueUrl}" class="form-horizontal" method="post" id="form">
+        <table border="0" cellspacing="0" cellpadding="5" class="form">
+            <tr>
+                <td class="l">
+                    <p class="hint"></p>
+                    <label class="label hint" for="isConfEnabled">
+                        <isprint value="${Resource.msg('form.labels.enableConfig', 'catch', null)}"/>
+                    </label>
+                    <input
+                        type="checkbox"
+                        id="isConfEnabled"
+                        name="isConfEnabled"
+                        ${pdict.data.configEnable ? "checked" : ''}
+                    />
+                </td>
+            </tr>
+            <tr>
+                <td class="l">
+                    <label class="label hint" for="configSelector">
+                        <isprint value="${Resource.msg('form.labels.selectConfig', 'catch', null)}"/>
+                    </label>
+
+                    <select class="input-select" name="configSelector" form="form" id="configSelector"
+                        data-get-pref-url="${URLUtils.url('CatchConfig-Preferences')}"
+                        ${pdict.data.configEnable ? '' : 'disabled'}>
+                        <isloop items="${pdict.data.settings}" var="currentSet" status="loopstate">
+                            <option value="${loopstate.index}" ${(loopstate.index === pdict.data.activeSettingID) ? 'selected' : ''}>${pdict.data.settings[loopstate.index].name}</option>
+                        </isloop>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td class="r bt" colspan="2">
+                    <button class="button button-float" type="submit"><isprint value="${Resource.msg('form.buttons.save', 'catch', null)} "/></button>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="error d-none" id="error-bar"></td>  
+            </tr>
+            <tr>
+                <td colspan="2" class="table_title_description n"></td>  
+            </tr>
+        </table>
+        
+        <table border="0" cellspacing="0" cellpadding="5" class="form set-of-data">
+            <isinclude template="properties" sf-toolkit="on" />
+        </table>
+
+        <input type="hidden" name="${dw.web.CSRFProtection.getTokenName()}" value="${dw.web.CSRFProtection.generateToken()}"/>
+    </form>
+</isdecorate>

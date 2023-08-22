@@ -1,0 +1,30 @@
+<tr>
+    <td class="table_header w s tab" nowrap="nowrap" colspan="1">
+        <isprint value="${Resource.msg('label.preference.name', 'catch', null)}" encoding="htmlcontent" />
+    </td>
+    <td class="table_header w e s center">
+        <isprint value="${Resource.msg('label.preference.value', 'catch', null)}" encoding="htmlcontent" />
+    </td>
+</tr>
+<isset name="props" value="${Object.keys(pdict.data.activeSetting)}" scope="page"/>
+<isloop items="${props}" var="prop">
+    <isif condition="${prop === 'name'}">
+        <iscontinue/>
+    </isif>
+    <isset name="propError" value="${!require('*/cartridge/scripts/catch/helper/configHelper').isCorrectPropertyName(prop)}" scope="page"/>
+    <tr>
+        <td class="${propError ? 'error' : 'table_detail'} w s" nowrap="nowrap" colspan="1">
+            <isprint value="${prop}" encoding="htmlcontent" />
+        </td>
+        <td class="table_detail w e s" nowrap="nowrap">
+            <isprint value="${pdict.data.activeSetting[prop]}" encoding="htmlcontent" />
+        </td>
+        <isif condition="${propError}">
+            <td class="error middle" nowrap="nowrap">
+                <span>
+                        ${Resource.msg('msg.preference.name.error', 'catch', null)}
+                </span>
+            </td>
+        </isif>
+    </tr>
+</isloop>

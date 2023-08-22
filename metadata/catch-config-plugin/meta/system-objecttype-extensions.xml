@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata xmlns="http://www.demandware.com/xml/impex/metadata/2006-10-31">
+    <type-extension type-id="SitePreferences">
+        <custom-attribute-definitions>
+            <attribute-definition attribute-id="catch_EnableCustomConfig">
+                <display-name xml:lang="x-default">Enable Catch custom configuration</display-name>
+                <description xml:lang="x-default">Enable Catch custom configuration</description>
+                <type>boolean</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+                <default-value>false</default-value>
+            </attribute-definition>
+            <attribute-definition attribute-id="catch_config">
+                <display-name xml:lang="x-default">Catch configuration</display-name>
+                <type>text</type>
+                <mandatory-flag>false</mandatory-flag>
+                <externally-managed-flag>false</externally-managed-flag>
+            </attribute-definition>
+        </custom-attribute-definitions>
+        <group-definitions>
+            <attribute-group group-id="CatchCustomConfig">
+                <display-name xml:lang="x-default">Catch Custom Config</display-name>
+                <attribute attribute-id="catch_EnableCustomConfig"/>
+                <attribute attribute-id="catch_config"/>
+            </attribute-group>
+        </group-definitions>
+    </type-extension>
+</metadata>

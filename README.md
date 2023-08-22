@@ -37,7 +37,7 @@ or on Google Drive:
 
 # Contributing
 
-Maintaned by cartridge team, but you can submit a PR for review by team.
+Maintained by the cartridge team, but you can submit a PR for review by the team.
 
 ## Contacts
 

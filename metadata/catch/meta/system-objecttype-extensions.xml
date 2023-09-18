@@ -270,8 +270,8 @@
                 <default-value>false</default-value>
             </attribute-definition>
             <attribute-definition attribute-id="catch_enableCatchConfirmationWidget">
-                <display-name xml:lang="x-default">Catch Virtual Card Purchase Confirmation Widget Enabled</display-name>
-                <description xml:lang="x-default">Catch Virtual Card Purchase Confirmation Widget Enabled</description>
+                <display-name xml:lang="x-default">Catch Purchase Confirmation Widget Enabled</display-name>
+                <description xml:lang="x-default">Catch Purchase Confirmation Widget Enabled</description>
                 <type>boolean</type>
                 <mandatory-flag>false</mandatory-flag>
                 <externally-managed-flag>false</externally-managed-flag>

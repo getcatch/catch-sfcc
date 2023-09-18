@@ -17,7 +17,11 @@
             <isprint value="${prop}" encoding="htmlcontent" />
         </td>
         <td class="table_detail w e s" nowrap="nowrap">
-            <isprint value="${pdict.data.activeSetting[prop]}" encoding="htmlcontent" />
+            <isif condition="${prop === 'catch_apiKey'}">
+                **********                
+            <iselse/>
+                <isprint value="${pdict.data.activeSetting[prop]}" encoding="htmlcontent" />                
+            </isif>
         </td>
         <isif condition="${propError}">
             <td class="error middle" nowrap="nowrap">

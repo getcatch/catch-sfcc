@@ -64,14 +64,14 @@ function handleForm() {
 
         try {
             var isConfEnabled = ('isConfEnabled' in params) && (params.isConfEnabled.submitted === true);
-            var configSelectID = ('config_selector' in params) ? params.configSelector.intValue : null;
+            var configSelectID = ('configSelector' in params) ? params.configSelector.stringValue : null;
             var configPref = getConfigPreferences();
 
             Transaction.wrap(function () {
                 currentSite.setCustomPreferenceValue('catch_EnableCustomConfig', isConfEnabled);
                 if (isConfEnabled && configPref) {
                     configPref.activeSettingID = configSelectID;
-                    var configPrefStr = JSON.stringify(configPref);
+                    var configPrefStr = JSON.stringify(configPref, null, 4);
                     currentSite.setCustomPreferenceValue('catch_config', configPrefStr);
                 }
             });

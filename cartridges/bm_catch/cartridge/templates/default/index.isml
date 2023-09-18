@@ -44,8 +44,8 @@
                     <select class="input-select" name="configSelector" form="form" id="configSelector"
                         data-get-pref-url="${URLUtils.url('CatchConfig-Preferences')}"
                         ${pdict.data.configEnable ? '' : 'disabled'}>
-                        <isloop items="${pdict.data.settings}" var="currentSet" status="loopstate">
-                            <option value="${loopstate.index}" ${(loopstate.index === pdict.data.activeSettingID) ? 'selected' : ''}>${pdict.data.settings[loopstate.index].name}</option>
+                        <isloop items="${Object.keys(pdict.data.settings)}" var="settingId">
+                            <option value="${settingId}" ${(settingId === pdict.data.activeSettingID) ? 'selected' : ''}>${settingId}</option>
                         </isloop>
                     </select>
                 </td>

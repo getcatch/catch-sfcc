@@ -1,12 +1,10 @@
-<isif condition="${pdict.isCatchEnabled}">
+<isif condition="${pdict.isCatchEnabled && pdict.enableWidget}">
     <isif condition="${pdict.isCatchVirtualCard}">
-        <isif condition="${pdict.enableWidget}">
-            <catch-purchase-confirmation-by-order-id
-                order-id="${pdict.orderNo}"
-                theme="<isprint value="${pdict.catchTheme}" encoding="htmldoublequote" />"
-                anchor-target="_blank"
-            />
-        </isif>
+        <catch-purchase-confirmation-by-order-id
+            order-id="${pdict.orderNo}"
+            theme="<isprint value="${pdict.catchTheme}" encoding="htmldoublequote" />"
+            anchor-target="_blank"
+        />
     <iselse/>
         <catch-purchase-confirmation
             id="catch-purchase-widget"
